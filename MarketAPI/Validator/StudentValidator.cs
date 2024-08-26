@@ -1,7 +1,7 @@
-namespace MarketAPI.Validator;
 
 using MarketAPI.Models.Student;
 
+namespace MarketAPI.Validator;
 public class StudentValidator : AbstractValidator<StudentRequest>
 {
     public StudentValidator()

@@ -1,10 +1,9 @@
-namespace MarketAPI.DAL;
-
 using System.Data;
 using Dapper;
 using MarketAPI.Abstraction;
 using MarketAPI.Database.Models;
 
+namespace MarketAPI.DAL;
 public class StudentService : IStudentService
 {
     private readonly IDbConnection _dbConnection;
