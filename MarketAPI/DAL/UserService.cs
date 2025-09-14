@@ -10,14 +10,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace MarketAPI.DAL;
 
-public class UserService : IUserService
+public class UserService(IDbConnection connection) : IUserService
 {
-    private readonly IDbConnection _connection;
-
-    public UserService(IDbConnection connection)
-    {
-        _connection = connection;
-    }
+    private readonly IDbConnection _connection = connection;
 
     public async Task CreateUser(User user)
     {

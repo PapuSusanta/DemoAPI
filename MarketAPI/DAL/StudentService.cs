@@ -4,14 +4,10 @@ using MarketAPI.Abstraction;
 using MarketAPI.Database.Models;
 
 namespace MarketAPI.DAL;
-public class StudentService : IStudentService
-{
-    private readonly IDbConnection _dbConnection;
 
-    public StudentService(IDbConnection dbConnection)
-    {
-        _dbConnection = dbConnection;
-    }
+public class StudentService(IDbConnection dbConnection) : IStudentService
+{
+    private readonly IDbConnection _dbConnection = dbConnection;
 
     public async Task AddStudent(Student student)
     {

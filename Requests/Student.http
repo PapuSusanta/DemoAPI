@@ -1,0 +1,21 @@
+@host=http://localhost:5176
+
+### Status check
+GET {{host}}/status
+
+### Get all students
+GET {{host}}/student
+
+### Get a student by ID
+@id=9cf5e71c-f943-46dd-b7b3-714433d0028c
+GET {{host}}/student/{{id}}
+
+### Create a new student
+POST {{host}}/student
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@test.com",
+  "phone": "123-456-7890"
+}

@@ -1,0 +1,21 @@
+@host=http://localhost:5176
+
+### Register a new user
+POST {{host}}/user/register
+Content-Type: application/json
+
+{
+  "name": "new user",
+  "password": "password123",
+  "email": "test@test.com",
+  "role": "User"
+}
+
+### Login a user
+POST {{host}}/user/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "password123"
+}
